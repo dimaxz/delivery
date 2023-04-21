@@ -40,7 +40,10 @@ class HomeController extends AbstractController
         $addresses = $this->deliveryCalculateService->getAddressRepository()->findAll();
         $deliverySum = 0;
         $deliveryComment = '';
-        if ($post['delivery'] > 0) {
+        if (!empty($post['delivery']) &&
+            !empty($post['address_from']) &&
+            !empty($post['address_to'])
+        ) {
             $weight = 0;
             foreach ($products as $product) {
                 $weight += $product->getWeight();

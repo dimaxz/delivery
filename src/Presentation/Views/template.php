@@ -78,7 +78,7 @@ $sum = 0;
     <br/>
 
     Сумма позиций: <?php echo $sum?> руб<br/>
-    Сумма доставки: <?php echo $delivery_sum?> руб <?php if(isset($delivery_comment)) echo '('.$delivery_comment.')'  ?><br/>
+    Сумма доставки: <?php echo $delivery_sum?> руб <?php if(!empty($delivery_comment)) echo '('.$delivery_comment.')'  ?><br/>
     Итого: <?php echo $sum + $delivery_sum?> руб<br/><br/>
 
     <button name="submit" type="submit">Расчитать доставку</button>
