@@ -1,0 +1,16 @@
+{
+  "require": {
+    "php": "8.0.*",
+    "symfony/var-dumper": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Delivery\\": "src/"
+    }
+  }
+}
